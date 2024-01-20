@@ -35,19 +35,27 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wym-mc-i7R">
                                 <rect key="frame" x="57" y="478" width="140" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign In"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign In">
+                                    <color key="baseBackgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="signInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1NJ-wb-3xk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0E4-SA-0Ed">
                                 <rect key="frame" x="201" y="478" width="134" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="134" id="QNe-Mh-ocz"/>
                                 </constraints>
+                                <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign Up">
+                                    <color key="baseBackgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="signUpClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NjV-Os-5Jf"/>
                                 </connections>
@@ -113,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O7t-GV-2KM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1926" y="713"/>
+            <point key="canvasLocation" x="1926" y="848"/>
         </scene>
         <!--UPLOAD-->
         <scene sceneID="NAK-8a-34J">
@@ -122,14 +130,63 @@
                     <view key="view" contentMode="scaleToFill" id="Qen-L6-GJ2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select" translatesAutoresizingMaskIntoConstraints="NO" id="vzk-JS-oup">
+                                <rect key="frame" x="0.0" y="117" width="393" height="295"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="295" id="5UF-sT-S8h"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="393" id="LAo-GX-MeH"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="295" id="VFc-Mj-Kiq"/>
+                                    <constraint firstAttribute="width" constant="393" id="iHT-Sf-1BQ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25G-6M-oci">
+                                <rect key="frame" x="151" y="575" width="91" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="X7d-EA-0Nn"/>
+                                </constraints>
+                                <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="UPLOAD">
+                                    <color key="baseBackgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="uploadClicked:" destination="8Xx-XW-xBL" eventType="touchUpInside" id="kjS-3S-tkI"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter comment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wh9-AN-yTi">
+                                <rect key="frame" x="19" y="475" width="354" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="fdP-20-q2W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gWH-Gd-ppO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gWH-Gd-ppO" firstAttribute="bottom" secondItem="25G-6M-oci" secondAttribute="bottom" constant="193" id="1h3-Xo-kZG"/>
+                            <constraint firstItem="25G-6M-oci" firstAttribute="top" secondItem="Wh9-AN-yTi" secondAttribute="bottom" constant="66" id="6NY-gb-y0M"/>
+                            <constraint firstItem="vzk-JS-oup" firstAttribute="top" secondItem="gWH-Gd-ppO" secondAttribute="top" constant="117" id="6YN-FY-rQI"/>
+                            <constraint firstItem="Wh9-AN-yTi" firstAttribute="leading" secondItem="gWH-Gd-ppO" secondAttribute="leading" constant="19" id="Ba3-tH-uUc"/>
+                            <constraint firstItem="Wh9-AN-yTi" firstAttribute="top" secondItem="vzk-JS-oup" secondAttribute="bottom" constant="63" id="ICS-1A-6mr"/>
+                            <constraint firstItem="vzk-JS-oup" firstAttribute="centerX" secondItem="Wh9-AN-yTi" secondAttribute="centerX" id="ZG7-NH-e6R"/>
+                            <constraint firstItem="Wh9-AN-yTi" firstAttribute="centerX" secondItem="25G-6M-oci" secondAttribute="centerX" id="mYk-7q-ecB"/>
+                            <constraint firstItem="vzk-JS-oup" firstAttribute="leading" secondItem="Qen-L6-GJ2" secondAttribute="leadingMargin" constant="-16" id="vcV-or-CQy"/>
+                            <constraint firstItem="vzk-JS-oup" firstAttribute="trailing" secondItem="Qen-L6-GJ2" secondAttribute="trailingMargin" constant="16" id="xX1-hO-Hda"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="UPLOAD" id="AUT-Xj-2ki"/>
+                    <connections>
+                        <outlet property="commentText" destination="Wh9-AN-yTi" id="akW-mw-0xt"/>
+                        <outlet property="imageView" destination="vzk-JS-oup" id="mx2-zg-5yW"/>
+                        <outlet property="uploadButton" destination="25G-6M-oci" id="ePI-xV-ffN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iBq-Pr-Gro" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1927" y="4"/>
+            <point key="canvasLocation" x="1925.9541984732823" y="3.5211267605633805"/>
         </scene>
         <!--FEED-->
         <scene sceneID="pbo-YQ-Puc">
@@ -169,6 +226,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="select" width="1012" height="922"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
