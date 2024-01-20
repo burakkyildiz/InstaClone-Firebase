@@ -14,12 +14,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+       
+        
           
     }
     
    
     @IBAction func signInClicked(_ sender: Any) {
+        
+        if emailText.text != "" && passwordText.text != ""{
+            Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { data, error in
+                if error != nil {
+                    self.showAlert(title: "ERROR", message: error?.localizedDescription ?? "Error")
+                }else{
+                    self.performSegue(withIdentifier: "toFeedVC", sender: nil)
+                }
+            }
+        }else{
+            showAlert(title: "ERROR", message: "USERNAME-PASSWORD CANNOT BE EMPTY!!")
+        }
         
     }
     @IBAction func signUpClicked(_ sender: Any) {
@@ -31,6 +45,8 @@ class ViewController: UIViewController {
                     self.performSegue(withIdentifier: "toFeedVC", sender: nil)
                 }
             }
+        }else{
+            showAlert(title: "ERROR", message: "USERNAME-PASSWORD CANNOT BE EMPTY!!")
         }
     }
     

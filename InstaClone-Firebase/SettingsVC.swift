@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class SettingsVC: UIViewController {
 
     override func viewDidLoad() {
@@ -16,7 +16,14 @@ class SettingsVC: UIViewController {
     }
     
     @IBAction func logOutClicked(_ sender: Any) {
-        performSegue(withIdentifier: "toViewVC", sender: nil)
+        
+        do{
+            try Auth.auth().signOut()
+            performSegue(withIdentifier: "toViewVC", sender: nil)
+        }
+        catch{
+            print("error")
+        }
     }
     
     

@@ -150,7 +150,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ke5-QQ-kaA">
             <objects>
-                <tabBarController id="Q6G-AB-LfZ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="Q6G-AB-LfZ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="zLS-t0-7xh"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UGZ-CX-DNQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
