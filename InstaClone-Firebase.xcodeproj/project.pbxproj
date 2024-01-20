@@ -14,6 +14,9 @@
 		676F1DD12B55347D00BFCF64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 676F1DD02B55347D00BFCF64 /* Assets.xcassets */; };
 		676F1DD42B55347D00BFCF64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 676F1DD22B55347D00BFCF64 /* LaunchScreen.storyboard */; };
 		676F1DDC2B55357D00BFCF64 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 676F1DDB2B55357D00BFCF64 /* GoogleService-Info.plist */; };
+		676F1DDE2B5B8A5E00BFCF64 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DDD2B5B8A5E00BFCF64 /* SettingsVC.swift */; };
+		676F1DE02B5B8A6A00BFCF64 /* UploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DDF2B5B8A6A00BFCF64 /* UploadVC.swift */; };
+		676F1DE22B5B8A7600BFCF64 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DE12B5B8A7600BFCF64 /* FeedVC.swift */; };
 		8193828F3FAB738A85136224 /* Pods_InstaClone_Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE58F2CAC6568D13A275889 /* Pods_InstaClone_Firebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		676F1DD32B55347D00BFCF64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		676F1DD52B55347D00BFCF64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		676F1DDB2B55357D00BFCF64 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		676F1DDD2B5B8A5E00BFCF64 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		676F1DDF2B5B8A6A00BFCF64 /* UploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVC.swift; sourceTree = "<group>"; };
+		676F1DE12B5B8A7600BFCF64 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		96E255EBB346F59AB9D8595E /* Pods-InstaClone-Firebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaClone-Firebase.release.xcconfig"; path = "Target Support Files/Pods-InstaClone-Firebase/Pods-InstaClone-Firebase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +82,9 @@
 				676F1DC72B55347C00BFCF64 /* AppDelegate.swift */,
 				676F1DC92B55347C00BFCF64 /* SceneDelegate.swift */,
 				676F1DCB2B55347C00BFCF64 /* ViewController.swift */,
+				676F1DDD2B5B8A5E00BFCF64 /* SettingsVC.swift */,
+				676F1DE12B5B8A7600BFCF64 /* FeedVC.swift */,
+				676F1DDF2B5B8A6A00BFCF64 /* UploadVC.swift */,
 				676F1DCD2B55347C00BFCF64 /* Main.storyboard */,
 				676F1DD02B55347D00BFCF64 /* Assets.xcassets */,
 				676F1DD22B55347D00BFCF64 /* LaunchScreen.storyboard */,
@@ -91,7 +100,6 @@
 				01853D9AA3136D3F2265F3EB /* Pods-InstaClone-Firebase.debug.xcconfig */,
 				96E255EBB346F59AB9D8595E /* Pods-InstaClone-Firebase.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -211,8 +219,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				676F1DE22B5B8A7600BFCF64 /* FeedVC.swift in Sources */,
 				676F1DCC2B55347C00BFCF64 /* ViewController.swift in Sources */,
+				676F1DDE2B5B8A5E00BFCF64 /* SettingsVC.swift in Sources */,
 				676F1DC82B55347C00BFCF64 /* AppDelegate.swift in Sources */,
+				676F1DE02B5B8A6A00BFCF64 /* UploadVC.swift in Sources */,
 				676F1DCA2B55347C00BFCF64 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,7 +287,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -339,7 +350,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
